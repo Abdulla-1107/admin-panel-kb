@@ -32,12 +32,10 @@ export default function Products() {
   // 🔥 React Query dan mahsulotlarni olish
   const { getProduct, deleteProduct } = useProduct();
   const { data: productsData, isLoading } = getProduct;
-  const products = productsData
 
   console.log(productsData);
-  
 
-  const filteredProducts = products
+  const filteredProducts = (productsData ?? [])
     .filter((p) => {
       const s = search.toLowerCase();
 

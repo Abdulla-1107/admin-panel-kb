@@ -84,7 +84,11 @@ export const ProductDialog = ({
   }, [product, open]);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.files?.[1]);
+
     const file = e.target.files?.[0];
+    console.log(file);
+    
     if (!file) return;
 
     const url = await upload(file); // compressed URL qaytadi
@@ -166,8 +170,6 @@ export const ProductDialog = ({
                 placeholder="Narxni kiriting"
               />
             </div>
-
-            
 
             {/* Rasm upload */}
             {/* Rasm upload */}

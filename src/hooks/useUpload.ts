@@ -26,7 +26,7 @@ export const useUpload = (): UseUploadResult => {
       });
 
       // Axios-da javob data ichida bo‘ladi
-      return res.data.compressed; // backend sizga URL qaytarishi kerak
+      return res.data.original; // backend sizga URL qaytarishi kerak
     } catch (err: any) {
       setError(err.response?.data?.message || err.message || "Unknown error");
       return "";
